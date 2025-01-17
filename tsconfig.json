@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
     "plugins": [
       {
         "name": "next"
@@ -20,8 +21,10 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", 
+  "**/*.tsx", ".next/types/**/*.ts", "auth.js", "app/api/auth/[...nextauth]/route.js", "__tests__/ui/home.test.js", "app/api/cloudinary/route.ts", "components/modules/website/order/StripeForm.jsx"],
   "exclude": ["node_modules"]
 }
